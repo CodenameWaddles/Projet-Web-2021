@@ -1,0 +1,41 @@
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+}
+.formulaire{
+    display:flex;
+    justify-content: center;
+    width: 60%;
+    background-color: #3072e0;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px #333333;
+    padding:30px;
+}
+.formCommentaire>h3, .commentaire>h3, .commentaire>p{
+    font-family: verdana;
+    color: #f7f7f7;
+    padding:10px;
+}
+.formCommentaire{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.commentaireBox{
+    height: 200px;
+    width: 450px;
+}
+.commentaire{
+    display: flex;
+    justify-content: center;
+    min-width: 30%;
+    max-width: 60%;
+    min-height: 30px;
+    background-color: #3072e0;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px #333333;
+    margin-top: 30px;
+    padding-bottom: 20px;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Crous EFREI Paris</title>
+    <link href="styleaccueil.css" rel="stylesheet" media="all" />
+    <link href="stylegeneral.css" rel="stylesheet" media="all" />
+</head>
+
+<body style="background-color: gainsboro;" onload="myFunction();">
+    <header class="header">
+        <div class="logo">
+            <img src="logopng.png" alt="EFREI Paris" style="width:327px;height:125px;">
+            <img src="logocrous.png" alt="Crous" style="height:125px;width:auto;">
+        </div>
+        <div class="barreNavigation">
+            <button onclick="window.location.href = 'Page daccueil.html';" class="navigation">Accueil</button>
+            <button onclick="window.location.href = 'Actualités.html';" class="navigation">Actualités</button>
+            <button onclick="window.location.href = 'Menus.html';" class="navigation">Menus de la semaine</button>
+            <button onclick="window.location.href = 'MenuCafeteria.html';" class="navigation">Menu de la cafétéria</button>
+            <button onclick="window.location.href = 'reserver.html';" class="navigation">Réserver sa place</button>
+            <button onclick="window.location.href = 'avis.html';" class="navigation">Donner son avis</button>
+        </div>
+        <div class="titrePage">
+            <h1 class="titre">Bienvenue au Crous d'EFREI Paris!</h1>
+        </div>
+    </header>
+    <main>
+        <div class="accueil">
+            <audio src="bienvenue.mp3" controls>Message de bienvenue</audio>
+            <h2>Le Crous d'EFREI Paris vous accueille du lundi au vendredi au sous-sol du bâtiment A entre 10h30 et 16h, avec son distributeur et sa machine à café et de nombreuses tables en libre accès en dehors des horaires de repas.</h2>
+            <img src="restau-crous.jpg" style="width:800px;height:auto" alt="photo-crous">
+        </div>
+    </main>
+    <footer class="footer">
+        <br>
+        <button onclick="window.location.href = 'propos.html';" class="navigation">A propos</button>
+    </footer>
+</body>
+</html>

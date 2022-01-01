@@ -1,0 +1,43 @@
+.menu {
+    border-collapse: collapse;
+    border: 3px solid black;
+    width: 500px;
+    margin: 40px;
+    height:400px;
+}
+tr {
+    background-color: #4581e7;
+    color: white;
+    transition-duration: 0.2s;
+}
+td {
+    text-align: center;
+}
+/*tr:hover {background-color: #88aeed;}*/
+
+th, td {
+    font-family: verdana;
+    height: 50px;
+}
+.menus1, .menus2, .menus3{
+    display:flex;
+    justify-content: center;
+    padding: 15px;
+}
+.presentation{
+    display: flex;
+    justify-content: center;
+    border-radius: 15px;
+    background-color: #3072e0;
+    width: 60%;
+    box-shadow: 5px 5px 5px #333333;
+}
+.presentation>h2{
+    font-family: verdana;
+    color: #f7f7f7;
+}
+main{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}

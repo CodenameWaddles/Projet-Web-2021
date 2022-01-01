@@ -1,0 +1,44 @@
+.menu {
+    border-collapse: collapse;
+    border: 3px solid black;
+    width: 500px;
+    margin: 40px;
+}
+
+th, td {
+  padding: 6px;
+  color: white;
+  font-family: verdana;
+  height: 50px;
+  text-align: center;
+}
+tr {
+  background-color: #4581e7;
+  transition-duration: 0.2s;
+}
+
+/*tr:hover {background-color: #88aeed;}*/
+
+main{
+  display: flex;
+  flex-direction: column;
+  color:black;
+  align-items: center;
+}
+.lundiMardi, .mercrediJeudi, .vendredi {
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+}
+.presentation{
+  display: flex;
+  justify-content: center;
+  border-radius: 15px;
+  background-color: #3072e0;
+  width: 60%;
+  box-shadow: 5px 5px 5px #333333;
+}
+.presentation>h2{
+  font-family: verdana;
+  color: #f7f7f7;
+}

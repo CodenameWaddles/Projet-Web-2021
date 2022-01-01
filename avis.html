@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Crous EFREI Paris</title>
+    <link href="styleavis.css" rel="stylesheet" media="all" />
+    <link href="stylegeneral.css" rel="stylesheet" media="all" />
+</head>
+
+<body style="background-color: gainsboro;" onload="myFunction();">
+    <header class="header">
+        <div class="logo">
+            <img src="logopng.png" alt="EFREI Paris" style="width:327px;height:125px;">
+            <img src="logocrous.png" alt="Crous" style="height:125px;width:auto;">
+        </div>
+        <div class="barreNavigation">
+            <button onclick="window.location.href = 'Page daccueil.html';" class="navigation">Accueil</button>
+            <button onclick="window.location.href = 'Actualités.html';" class="navigation">Actualités</button>
+            <button onclick="window.location.href = 'Menus.html';" class="navigation">Menus de la semaine</button>
+            <button onclick="window.location.href = 'MenuCafeteria.html';" class="navigation">Menu de la cafétéria</button>
+            <button onclick="window.location.href = 'reserver.html';" class="navigation">Réserver sa place</button>
+            <button onclick="window.location.href = 'avis.html';" class="navigation">Donner son avis</button>
+        </div>
+        <div class="titrePage">
+            <h1 class="titre">Votre avis nous intéresse!</h1>
+        </div>
+    </header>
+    <main id="main">
+        <div class="formulaire">
+            <form class="formCommentaire" name="formCommentaire" onsubmit="return false;">
+                <h3>
+                    <label for="nom">Votre nom/pseudo:</label><br>
+                    <input type="text" name="nom" id="nom">
+                </h3>
+                <h3>
+                    <label for="commentaire">Votre avis:</label><br>
+                    <textarea name="commentaire" class="commentaireBox" id="commentaire"></textarea>
+                </h3>
+                <button onclick="ajouter()" class="navigation">Envoyer</button>
+            </form>
+        </div>
+        <div class="commentaire">
+            <h3>Jules Lerouge</h3>
+            <p>Super Crous ! Des plats pas trop chers et des assiettes bien remplies. J'en suis très satisfait !</p>
+        </div>
+        <div class="commentaire">
+            <h3>Corentin Théron</h3>
+            <p>Une caissière extrêmement désagréable, si vous prenez 1 plat sans viande et sans dessert vous payez exactement le même prix qu’en prenant ces deux éléments. Le système de point n’a donc aucune signification. Le prix est toujours le même, la caissière est d’un désagréable sans précédent et n’a plus aucune limite dans ces propos en étant même grossière. Honteux ! A fuir, possibilité de manger ailleurs dans le quartier dans des conditions beaucoup plus agréable.</p>
+        </div>
+        <div class="commentaire">
+            <h3>Alexandre Devincre</h3>
+            <p>Bien qu'il ait été un peu compliqué et que j'ai dû remonter des pièces par deux fois dans mon dossier du fait du changement d'académie, mes interlocuteurs téléphone ont toujours été cordiaux, et mon dossier a été traité extrêmement rapidement (dans la semaine) dès que les pièces sont arrivées. J'ai reçu mon mois en retard en même temps que celui de septembre dès le début octobre.</p>
+        </div>
+    </main>
+    <footer class="footer">
+        <br>
+        <button onclick="window.location.href = 'propos.html';" class="navigation">A propos</button>
+    </footer>
+    <script>
+        function ajouter(){
+            var formCommentaire = document.forms.formCommentaire;
+            var pCommentaire = document.createElement("p");
+            var h3Nom = document.createElement("h3");
+            var div1 = document.createElement("div");
+            div1.setAttribute("class", "commentaire");
+            var commentaire = formCommentaire.elements.commentaire.value;
+            var nom = formCommentaire.elements.nom.value;
+            pCommentaire.textContent = commentaire;
+            h3Nom.textContent = nom;
+            div1.append(h3Nom);
+            div1.append(pCommentaire)
+            if(nom == ""){
+                alert("Remplissez votre nom/pseudo")
+            }
+            else if(commentaire == ""){
+                alert("Remplisser votre avis");
+            }
+            else{
+                document.getElementById("main").appendChild(div1);
+            }
+        }
+    </script>
+</body>
+</html>

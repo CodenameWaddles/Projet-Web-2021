@@ -1,0 +1,50 @@
+.tabReserve {
+    border-collapse: collapse;
+    background-color: #4581e7;
+    border: 3px solid black;
+    width: 90%;
+}
+
+th, td {
+  padding: 6px;
+  font-size: 30px;
+  text-align: center;
+}
+tr {
+  background-color: #88aeed;
+}
+/*tr:hover {background-color: #88aeed;}*/
+main{
+  display: flex;
+  color:black;
+  justify-content: space-around;
+  margin:20px;
+}
+h2, h3 {
+  font-family: verdana;
+  color: #f7f7f7;
+  padding:10px;
+}
+.form{
+  display: flex;
+  justify-content: space-around;
+}
+.formulaire{
+  display:flex;
+  flex-direction: column;
+  width: 47%;
+  background-color: #3072e0;
+  border-radius: 15px;
+  height: fit-content;
+  box-shadow: 5px 5px 5px #333333;
+}
+.reserve{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 47%;
+  background-color: #4581e7;
+  border-radius: 15px;
+  padding:10px;
+  box-shadow: 5px 5px 5px #333333;
+}

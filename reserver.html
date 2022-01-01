@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Commande</title>
+    <link href="stylereserver.css" rel="stylesheet" media="all" />
+    <link href="stylegeneral.css" rel="stylesheet" media="all" />
+</head>
+
+<body style="background-color: gainsboro;">
+    <header class="header">
+        <div class="logo">
+            <img src="logopng.png" alt="EFREI Paris" style="width:327px;height:125px;">
+            <img src="logocrous.png" alt="Crous" style="height:125px;width:auto;">
+        </div>
+        <div class="barreNavigation">
+            <button onclick="window.location.href = 'Page daccueil.html';" class="navigation">Accueil</button>
+            <button onclick="window.location.href = 'Actualités.html';" class="navigation">Actualités</button>
+            <button onclick="window.location.href = 'Menus.html';" class="navigation">Menus de la semaine</button>
+            <button onclick="window.location.href = 'MenuCafeteria.html';" class="navigation">Menu de la cafétéria</button>
+            <button onclick="window.location.href = 'reserver.html';" class="navigation">Réserver sa place</button>
+            <button onclick="window.location.href = 'avis.html';" class="navigation">Donner son avis</button>
+        </div>
+        <div class="titrePage">
+            <h1 class="titre">Réserver sa place/table</h1>
+        </div>
+    </header>
+    <main>
+        <form name="reservation" onsubmit="return false" class="formulaire">
+            <div class="form">
+                <h2>Coordonnées</h2>
+            </div>
+            <div class="form">
+                <h3>
+                    <label for="nom">Nom</label><br>
+                    <input type="text" id="nom" name="nom">
+                </h3>
+                <h3>
+                    <label for="prenom">Prénom</label><br>
+                    <input type="text" id="prenom" name="prenom">
+                </h3>
+            </div>
+            <div class="form">
+                <h3>
+                    <label for="adresse">Adresse mail</label><br>
+                    <input type="text" id="adresse" name="adresse">
+                </h3>
+                <h3>
+                    <label for="telephone">Téléphone</label><br>
+                    <input type="text" id="telephone" name="telephone">
+                </h3>
+            </div>
+            <div class="form">
+                <h3>
+                    Jour: 
+                    <select name="jour">
+                        <option selected>
+                            Lundi
+                        </option>
+                        <option>
+                            Mardi
+                        </option>
+                        <option>
+                            Mercredi
+                        </option>
+                        <option>
+                            Jeudi
+                        </option>
+                        <option>
+                            Vendredi
+                        </option>
+                    </select>
+                </h3><h3>
+                    Nombre de personnes: 
+                    <select name="nbPersonnes">
+                        <option selected>
+                            1
+                        </option>
+                        <option>
+                            2
+                        </option>
+                        <option>
+                            3
+                        </option>
+                        <option>
+                            4
+                        </option>
+                    </select>
+                </h3>
+            </div>
+            <div class="form">
+                <button onclick="ajouter()" class="navigation">Réserver</button>
+                <button type="reset" class="navigation">Annuler</button>
+            </div>
+            <br>
+            <br>
+        </form>
+        <br>
+        <div class=reserve>
+            <h2>Réservations enregistrées</h2>
+            <table class="tabReserve" id="tableReservation">
+                <colgroup>
+                    <col style="background-color: whitesmoke;">
+                    <col style="background-color: whitesmoke;">
+                    <col style="background-color: whitesmoke;">
+                    <col style="background-color: whitesmoke;">
+                    <col style="background-color: whitesmoke;">
+                    <col style="background-color: whitesmoke;">
+                </colgroup>
+                <tr>
+                    <td>Nom</td>
+                    <td>Prénom</td>
+                    <td>Adresse mail</td>
+                    <td>Téléphone</td>
+                    <td>Jour</td>
+                    <td>Personnes</td>
+                </tr>
+            </table>
+        </div>
+    </main>
+    <footer class="footer">
+        <br>
+        <button onclick="window.location.href = 'propos.html';" class="navigation">A propos</button>
+    </footer>
+
+    <script>
+        function ajouter(){
+            var reserveForm = document.forms.reservation;
+            var nom = reserveForm.elements.nom.value;
+            var prenom = reserveForm.elements.prenom.value;
+            var adresse = reserveForm.elements.adresse.value;
+            var telephone = reserveForm.elements.telephone.value;
+            var jour = reserveForm.elements.jour.value;
+            var nbPersonnes = reserveForm.elements.nbPersonnes.value;
+            if(nom == "" || prenom == "" || adresse == "" || telephone == ""){
+                alert("Remplissez l'entièreté du formulaire");
+            }
+            else{
+                var tdNom = document.createElement("td");
+                tdNom.textContent = nom;
+                var tdPrenom = document.createElement("td");
+                tdPrenom.textContent = prenom;
+                var tdAdresse = document.createElement("td");
+                tdAdresse.textContent = adresse;
+                var tdTelephone = document.createElement("td");
+                tdTelephone.textContent = telephone;
+                var tdJour = document.createElement("td");
+                tdJour.textContent = jour;
+                var tdNbPersonnes = document.createElement("td");
+                tdNbPersonnes.textContent = nbPersonnes;
+                var tr1 = document.createElement("tr");
+                tr1.append(tdNom);
+                tr1.append(tdPrenom);
+                tr1.append(tdAdresse);
+                tr1.append(tdTelephone);
+                tr1.append(tdJour);
+                tr1.append(tdNbPersonnes);
+                document.getElementById("tableReservation").appendChild(tr1);
+            }
+        }
+    </script>
+</body>
+
+</html>

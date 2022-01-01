@@ -1,0 +1,43 @@
+.navigation {
+    background-color: #4581e7;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    /*border-radius: 4px; */
+    transition-duration: 0.4s;
+}
+.navigation:hover {
+    background-color: #88aeed;
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+}
+.barreNavigation{
+    display: flex;
+    justify-content: center;
+    padding:6px;
+}
+.titrePage{
+    display:flex;
+    justify-content: center;
+}
+.titre{
+    font-family: verdana;
+    color: #3072e0;
+    text-shadow:3px 3px 3px #333333;
+}
+.footer{
+    display: flex;
+    justify-content: center;
+    padding:10px;
+}

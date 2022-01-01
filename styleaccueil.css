@@ -1,0 +1,19 @@
+main{
+    display: flex;
+    justify-content: center;
+}
+.accueil{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:30px;
+    width: 70%;
+    background-color: #3072e0;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px #333333;
+    margin-bottom: 30px;
+}
+.accueil>h2{
+    font-family: verdana;
+    color: #f7f7f7;
+}
